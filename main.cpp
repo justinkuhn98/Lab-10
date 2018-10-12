@@ -1,3 +1,10 @@
+/**********************************************************
+ * AUTHOR       : Justin Kuhn, Vincent Li, Brad Kim
+ * Lab       #10: Student List
+ * CLASS        : CS3A
+ * SECTION      : MW: 1:00p - 2:25p, TR: 1:00p - 3:05p
+ * Due Date     : 10/12/18
+*********************************************************/
 #include "header.h"
 #include <iostream>
 #include <string>
@@ -6,23 +13,26 @@ using namespace std;
 
 int main()
 {
-    StudentNode *temp = nullptr;
+    StudentNode *head = NULL;
     string name;
 
-    readFile(temp);
+
+    name = "Anna White";
+
+    readFile(head);
 
     //Testing display Function
-    display(temp);
+    display(head);
 
     //Testing findSTudent function;
-    findStudent(temp, name);
+    findStudent(head, name);
 
     //Testing remove first node function;
-    remove(temp);
+    remove(head);
 
     //Testing display new  Student list after node removal
-    updatedList(temp);
+    updatedList(head);
 
     //Testing display average GPA
-    avgGPA(temp);
+    avgGPA(head);
 }

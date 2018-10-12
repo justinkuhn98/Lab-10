@@ -8,6 +8,10 @@
 void readFile(StudentNode *&templist)
 {
 
+    bool first;
+
+    first = true;
+
     StudentNode *head;
     StudentNode *temp;
 
@@ -15,20 +19,18 @@ void readFile(StudentNode *&templist)
 
     inFile.open("inFile.txt");
 
+
     if(inFile.fail())
     {
         cout<< "file did not open"<<endl;
     }
 
-    temp->next = NULL;
 
     while(!inFile.eof())
     {
+
         head = new StudentNode;
-        if(temp->next == NULL)
-        {
-            head->next = NULL;
-        }
+
         getline(inFile, head->name);
         inFile >> head->age;
         inFile.ignore(1000,'\n');
@@ -37,16 +39,25 @@ void readFile(StudentNode *&templist)
         inFile.ignore(1000,'\n');
         inFile.ignore(1000,'\n');
 
+        if(first)
+        {
+            head->next = NULL;
+            first = false;
+        }
+        else
+        {
+            head->next = temp;
+        }
+
         temp = head;
-
-        head->next = temp;
-
 
     }
 
     templist = head;
 
 }
+
+
 
 void findStudent (StudentNode *templist, string name)
 {
@@ -115,7 +126,7 @@ void updatedList(StudentNode *templist)
     cout<<setw(15)<<left<<"Major";
     cout<<"GPA"<<endl;
 
-    while(templist != NULL)
+    while(templist->next != NULL)
     {
         cout<<setw(15)<<left<<templist->name;
         cout<<setw(8)<<left<<templist->age;
@@ -133,7 +144,7 @@ void avgGPA(StudentNode *templist)
     avg = 0;
     count = 0;
 
-    while(templist != NULL)
+    while(templist->next != NULL)
     {
        avg+=templist->gpa;
        count++;
