@@ -144,7 +144,7 @@ void avgGPA(StudentNode *templist)
     avg = 0;
     count = 0;
 
-    while(templist->next != NULL)
+    while(templist != NULL)
     {
        avg+=templist->gpa;
        count++;
