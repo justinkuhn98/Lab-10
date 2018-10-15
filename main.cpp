@@ -31,7 +31,9 @@ int main()
     remove(head);
 
     //Testing display new  Student list after node removal
-    updatedList(head);
+    cout<<"\nUpdated Student List:\n";
+    display(head);
+
 
     //Testing display average GPA
     avgGPA(head);

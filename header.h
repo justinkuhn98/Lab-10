@@ -18,7 +18,6 @@ void readFile(StudentNode *&templist);
 void display(StudentNode *templist);
 void findStudent(StudentNode *templist, string name);
 void remove(StudentNode *&templist);
-void updatedList(StudentNode *templist);
 void avgGPA(StudentNode *templist);
 
 

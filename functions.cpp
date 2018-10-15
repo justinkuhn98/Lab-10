@@ -118,23 +118,6 @@ void remove(StudentNode *&templist)
     delete temp;
 }
 
-void updatedList(StudentNode *templist)
-{
-    cout<<"\nUpdated Student List:\n";
-    cout<<setw(15)<<left<<"Name";
-    cout<<setw(8)<<left<<"Age";
-    cout<<setw(15)<<left<<"Major";
-    cout<<"GPA"<<endl;
-
-    while(templist != NULL)
-    {
-        cout<<setw(15)<<left<<templist->name;
-        cout<<setw(8)<<left<<templist->age;
-        cout<<setw(15)<<left<<templist->major;
-        cout<<templist->gpa<<endl;
-        templist = templist->next;
-    }
-}
 
 void avgGPA(StudentNode *templist)
 {
