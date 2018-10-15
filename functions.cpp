@@ -4,7 +4,6 @@
 #include <iomanip>
 
 
-
 void readFile(StudentNode *&templist)
 {
 
@@ -92,7 +91,7 @@ void display(StudentNode *templist)
     cout<<setw(15)<<left<<"Major";
     cout<<"GPA"<<endl;
 
-    while(templist != NULL)
+    while(templist->next != NULL)
     {
         cout<<setw(15)<<left<<templist->name;
         cout<<setw(8)<<left<<templist->age;
