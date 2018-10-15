@@ -3,7 +3,7 @@
  * Lab       #10: Student List
  * CLASS        : CS3A
  * SECTION      : MW: 1:00p - 2:25p, TR: 1:00p - 3:05p
- * Due Date     : 10/12/18
+ * Due Date     : 10/15/18
 *********************************************************/
 #include "header.h"
 #include <iostream>
