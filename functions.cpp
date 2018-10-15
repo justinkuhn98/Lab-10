@@ -50,6 +50,8 @@ void readFile(StudentNode *&templist)
 
         temp = head;
 
+
+
     }
 
     templist = head;
@@ -91,7 +93,7 @@ void display(StudentNode *templist)
     cout<<setw(15)<<left<<"Major";
     cout<<"GPA"<<endl;
 
-    while(templist->next != NULL)
+    while(templist != NULL)
     {
         cout<<setw(15)<<left<<templist->name;
         cout<<setw(8)<<left<<templist->age;
@@ -101,7 +103,6 @@ void display(StudentNode *templist)
     }
 
 }
-\
 void remove(StudentNode *&templist)
 {
     StudentNode *temp;
@@ -125,7 +126,7 @@ void updatedList(StudentNode *templist)
     cout<<setw(15)<<left<<"Major";
     cout<<"GPA"<<endl;
 
-    while(templist->next != NULL)
+    while(templist != NULL)
     {
         cout<<setw(15)<<left<<templist->name;
         cout<<setw(8)<<left<<templist->age;
